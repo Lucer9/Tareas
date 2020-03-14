@@ -1,0 +1,59 @@
+<style>
+  .table-container {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+    -webkit-box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    background-color: white;
+  }
+
+  th {
+    padding: 20px;
+    border: none;
+    opacity: .2;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  td {
+    padding: 20px;
+    border: none;
+  }
+
+
+  tr:nth-child(even) {
+    background-color: white;
+  }
+</style>
+
+<main role="main" class="container">
+  <div class="starter-template">
+    <h1>Users</h1>
+    <br>
+    <div class="table-container">
+      <table>
+        <tr>
+          <th style="width: 40%;">Name</th>
+          <th style="width: 40%;">email</th>
+          <th style="width: 20%;">role</th>
+        </tr>
+        {{#each users}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{email}}</td>
+          <td>{{role}}</td>
+        </tr>
+        {{/each}}
+      </table>
+    </div>
+  </div>
+</main>
